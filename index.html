@@ -45,11 +45,48 @@
             </div>
         <h1 class="m-5 " style="text-wrap: balance;">Calculadora con Bootstrap y JavaScript</h1>
         <form action="">
-            <label for="factura" class="form-label">Comida</label>
-            <div class="input-group">
-                <div class="input-group-text">€</div>
-                <input type="number" id="factura" class="form-control">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Comidas
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Ensalada Cesar', 10)">Ensalada Cesar</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Sopa de tomate', 8)">Sopa de tomate</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Pollo al horno', 15)">Pollo al horno</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Pasta Alfredo', 12)">Pasta Alfredo</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Salmón a la parrilla', 20)">Salmón a la parrilla</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bebidas
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Agua', 1)">Agua</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Coca-Cola', 2)">Coca-Cola</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Estrella Damm', 3)">Estrella Damm</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Alhambra', 4)">Alhambra</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="completarComida('Vino', 5)">Vino</button></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class="input-group mb-3">
+                <input type="text" id="comida" class="form-control">
+                <div class="input-group-text">€</div>
+                <input type="number" id="precio" class="form-control">
+            </div>
+            <button class="btn btn-outline-primary mb-5" type="button" onclick="agregarComida()">Agregar</button>
+        </br>
+        <h4>Pedido</h4>
+        <hr>
+        <ul id="listaComidas" class="list-group">
+            <!-- Aquí se mostrarán las comidas agregadas -->
+        </ul>
         </br>
             <label for="propina" class="form-label">% de propina</label>
             <div class="input-group">
