@@ -17,7 +17,32 @@
     <script src="calculadora.js"></script>
 
     
-    <div class="container">
+    <div class="container m-3">
+
+            <div class="dropdown d-flex justify-content-end">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                Log In
+                </button>
+                <form class="dropdown-menu p-4">
+                <div class="mb-3">
+                    <label for="exampleDropdownFormEmail2" class="form-label">Nº Empleado</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Ej: Del1234">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    <label class="form-check-label" for="dropdownCheck2">
+                        Recordarme
+                    </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+                </form>
+            </div>
         <h1 class="m-5 " style="text-wrap: balance;">Calculadora con Bootstrap y JavaScript</h1>
         <form action="">
             <label for="factura" class="form-label">Comida</label>
