@@ -91,11 +91,9 @@
             <label for="propina" class="form-label">% de propina</label>
             <div class="input-group">
                 <div class="input-group-text">%</div>
-                <input type="number" id="propina" class="form-control">
+                <input type="number" id="propina" class="form-control" oninput="calcular()">
             </div>
 
-        </br>
-        <button class="btn btn-outline-primary mb-5" type="button" onclick="calcular()">Calcular</button>
         </br>
         <label for="total" class="form-label">Total</label>
         <div class="input-group mb-5">
@@ -103,54 +101,19 @@
             <input type="number" id="total" class="form-control" readonly>
         </div>
 
-        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal">Mostrar factura</button>
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal">Imprimir factura</button>
 
         <div class="modal fade" id="modal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Resumen de la factura </h5>
+                        <h5 class="modal-title">¿Quiere imprimir la factura? </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Cerrar"></button>
                     </div>
-                    <div class="modal-body">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Plato</th>
-                                    <th>€</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Ensalada Cesar</td>
-                                    <td>10</td>
-                                </tr>
-                                <tr>
-                                    <td>Sopa de tomate</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>Pollo al horno</td>
-                                    <td>15</td>
-                                </tr>
-                                <tr>
-                                    <td>Pasta Alfredo</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr class="table-warning">
-                                    <td>Propina</td>
-                                    <td>10%</td>
-                                </tr>
-                                <tr class="table-secondary">
-                                    <td>Total factura</td>
-                                    <td>49.5</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                   
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Imprimir</button>
                     </div>
                 </div>
             </div>
